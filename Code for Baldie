@@ -1,0 +1,262 @@
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local ScrollingFrame = Instance.new("ScrollingFrame")
+local InfiniteYield = Instance.new("TextButton")
+local DEX = Instance.new("TextButton")
+local Cripple = Instance.new("TextButton")
+local WeirdAghfly = Instance.new("TextButton")
+local GrabKnife = Instance.new("TextButton")
+local BTools = Instance.new("TextButton")
+local ctrlclickTP = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 3
+Frame.Position = UDim2.new(0.0377699807, 0, 0.0300000012, 0)
+Frame.Size = UDim2.new(0, 312, 0, 169)
+
+ScrollingFrame.Parent = ScreenGui
+ScrollingFrame.Active = true
+ScrollingFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ScrollingFrame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ScrollingFrame.BorderSizePixel = 2
+ScrollingFrame.Position = UDim2.new(0.0556476414, 0, 0.0806731433, 0)
+ScrollingFrame.Size = UDim2.new(0, 260, 0, 126)
+
+InfiniteYield.Name = "Infinite Yield"
+InfiniteYield.Parent = ScrollingFrame
+InfiniteYield.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+InfiniteYield.BorderColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.BorderSizePixel = 0
+InfiniteYield.Size = UDim2.new(0, 130, 0, 50)
+InfiniteYield.Font = Enum.Font.SourceSans
+InfiniteYield.Text = "Infinite Yield"
+InfiniteYield.TextColor3 = Color3.fromRGB(0, 0, 0)
+InfiniteYield.TextSize = 14.000
+
+DEX.Name = "DEX"
+DEX.Parent = ScrollingFrame
+DEX.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+DEX.BorderColor3 = Color3.fromRGB(0, 0, 0)
+DEX.BorderSizePixel = 0
+DEX.Position = UDim2.new(0.5, 0, 0, 0)
+DEX.Size = UDim2.new(0, 120, 0, 50)
+DEX.Font = Enum.Font.SourceSans
+DEX.Text = "DEX"
+DEX.TextColor3 = Color3.fromRGB(0, 0, 0)
+DEX.TextSize = 14.000
+
+Cripple.Name = "Cripple"
+Cripple.Parent = ScrollingFrame
+Cripple.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Cripple.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Cripple.BorderSizePixel = 0
+Cripple.Position = UDim2.new(0, 0, 0.0476190485, 0)
+Cripple.Size = UDim2.new(0, 130, 0, 50)
+Cripple.Font = Enum.Font.SourceSans
+Cripple.Text = "Be Crippled"
+Cripple.TextColor3 = Color3.fromRGB(0, 0, 0)
+Cripple.TextSize = 14.000
+
+WeirdAghfly.Name = "Weird Agh fly"
+WeirdAghfly.Parent = ScrollingFrame
+WeirdAghfly.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+WeirdAghfly.BorderColor3 = Color3.fromRGB(0, 0, 0)
+WeirdAghfly.BorderSizePixel = 0
+WeirdAghfly.Position = UDim2.new(0.5, 0, 0.0646622702, 0)
+WeirdAghfly.Size = UDim2.new(0, 120, 0, 50)
+WeirdAghfly.Font = Enum.Font.SourceSans
+WeirdAghfly.Text = " troll fly (press F)"
+WeirdAghfly.TextColor3 = Color3.fromRGB(0, 0, 0)
+WeirdAghfly.TextSize = 14.000
+
+GrabKnife.Name = "Grab Knife"
+GrabKnife.Parent = ScrollingFrame
+GrabKnife.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+GrabKnife.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GrabKnife.BorderSizePixel = 0
+GrabKnife.Position = UDim2.new(0, 0, 0.104686372, 0)
+GrabKnife.Size = UDim2.new(0, 130, 0, 50)
+GrabKnife.Font = Enum.Font.SourceSans
+GrabKnife.Text = "Grab Knife"
+GrabKnife.TextColor3 = Color3.fromRGB(0, 0, 0)
+GrabKnife.TextSize = 14.000
+
+BTools.Name = "BTools"
+BTools.Parent = ScrollingFrame
+BTools.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+BTools.BorderColor3 = Color3.fromRGB(0, 0, 0)
+BTools.BorderSizePixel = 0
+BTools.Position = UDim2.new(0.47307691, 0, 0.143145725, 0)
+BTools.Size = UDim2.new(0, 120, 0, 50)
+BTools.Font = Enum.Font.SourceSans
+BTools.Text = "BTools"
+BTools.TextColor3 = Color3.fromRGB(0, 0, 0)
+BTools.TextSize = 14.000
+
+ctrlclickTP.Name = "ctrl+click TP"
+ctrlclickTP.Parent = ScrollingFrame
+ctrlclickTP.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+ctrlclickTP.BorderColor3 = Color3.fromRGB(0, 0, 0)
+ctrlclickTP.BorderSizePixel = 0
+ctrlclickTP.Position = UDim2.new(0, 0, 0.15399763, 0)
+ctrlclickTP.Size = UDim2.new(0, 130, 0, 50)
+ctrlclickTP.Font = Enum.Font.SourceSans
+ctrlclickTP.Text = "ctrl+click TP"
+ctrlclickTP.TextColor3 = Color3.fromRGB(0, 0, 0)
+ctrlclickTP.TextSize = 14.000
+
+TextLabel.Parent = ScreenGui
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BorderColor3 = Color3.fromRGB(85, 255, 255)
+TextLabel.BorderSizePixel = 2
+TextLabel.Position = UDim2.new(0.0918097049, 0, 0.0403818786, 0)
+TextLabel.Size = UDim2.new(0, 157, 0, 25)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "Baldie GUI"
+TextLabel.TextColor3 = Color3.fromRGB(170, 0, 0)
+TextLabel.TextSize = 14.000
+
+-- Scripts:
+
+local function KBNOOL_fake_script() -- InfiniteYield.Infinite Yield script 
+	local script = Instance.new('LocalScript', InfiniteYield)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+		end)
+end
+coroutine.wrap(KBNOOL_fake_script)()
+local function RNBQTR_fake_script() -- DEX.Dex script 
+	local script = Instance.new('LocalScript', DEX)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+	end)
+	
+end
+coroutine.wrap(RNBQTR_fake_script)()
+local function OBEI_fake_script() -- Cripple.Cripple script 
+	local script = Instance.new('LocalScript', Cripple)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Remove%20Legs.txt"))()
+	end)
+end
+coroutine.wrap(OBEI_fake_script)()
+local function SFVUD_fake_script() -- WeirdAghfly.Troll Fly script 
+	local script = Instance.new('LocalScript', WeirdAghfly)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local player = game.Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local rootPart = character:WaitForChild("HumanoidRootPart")
+	
+	local speed = 50 -- Adjust this value to change the flying speed
+	local isFlying = false
+	
+	local function toggleFly()
+		isFlying = not isFlying
+		humanoid.PlatformStand = isFlying -- Prevents default walking physics
+		if isFlying then
+			print("Flying enabled!")
+		else
+			print("Flying disabled!")
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+		if gameProcessedEvent then return end -- Don't process input that the game already handled
+	
+		if input.KeyCode == Enum.KeyCode.F then -- Change 'F' to your desired toggle key
+			toggleFly()
+		end
+	end)
+	
+	game:GetService("RunService").Stepped:Connect(function()
+		if isFlying then
+			local moveDirection = Vector3.new(0, 0, 0)
+	
+			-- Get input from WASD keys (or your game's movement keys)
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.W) then
+				moveDirection += rootPart.CFrame.LookVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.S) then
+				moveDirection -= rootPart.CFrame.LookVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.A) then
+				moveDirection -= rootPart.CFrame.RightVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.D) then
+				moveDirection += rootPart.CFrame.RightVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.Space) then
+				moveDirection += Vector3.new(0, 1, 0) -- Move up
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftShift) then
+				moveDirection -= Vector3.new(0, 1, 0) -- Move down
+			end
+	
+			-- Normalize the movement direction if it's not zero
+			if moveDirection.Magnitude > 0 then
+				moveDirection = moveDirection.Unit
+			end
+	
+			-- Apply the velocity
+			rootPart.Velocity = moveDirection * speed
+		else
+			-- If not flying, reset velocity to allow normal movement
+			rootPart.Velocity = Vector3.new(0, 0, 0)
+		end
+	end)
+	
+	-- Ensure the character is loaded initially
+	if not character:IsDescendantOf(game) then
+		player.CharacterAdded:Connect(function(newCharacter)
+			character = newCharacter
+			humanoid = character:WaitForChild("Humanoid")
+			rootPart = character:WaitForChild("HumanoidRootPart")
+		end)
+	end
+	end)
+end
+coroutine.wrap(SFVUD_fake_script)()
+local function NJCEB_fake_script() -- GrabKnife.Grab knife script 
+	local script = Instance.new('LocalScript', GrabKnife)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
+		end)
+end
+coroutine.wrap(NJCEB_fake_script)()
+local function RCOTTL_fake_script() -- BTools.BTools script 
+	local script = Instance.new('LocalScript', BTools)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+	end)
+	
+end
+coroutine.wrap(RCOTTL_fake_script)()
+local function BLIUI_fake_script() -- ctrlclickTP.ctrl+click TP script 
+	local script = Instance.new('LocalScript', ctrlclickTP)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Click%20Teleport.txt"))()
+	end)
+	
+end
+coroutine.wrap(BLIUI_fake_script)()
