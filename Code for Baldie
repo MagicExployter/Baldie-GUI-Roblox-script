@@ -129,3 +129,128 @@ TextLabel.Font = Enum.Font.SourceSans
 TextLabel.Text = "Baldie GUI"
 TextLabel.TextColor3 = Color3.fromRGB(170, 0, 0)
 TextLabel.TextSize = 14.000
+
+-- Scripts:
+
+local function KBNOOL_fake_script() -- InfiniteYield.Infinite Yield script 
+	local script = Instance.new('LocalScript', InfiniteYield)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"))()
+		end)
+end
+coroutine.wrap(KBNOOL_fake_script)()
+local function RNBQTR_fake_script() -- DEX.Dex script 
+	local script = Instance.new('LocalScript', DEX)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Dex%20Explorer.txt"))()
+	end)
+	
+end
+coroutine.wrap(RNBQTR_fake_script)()
+local function OBEI_fake_script() -- Cripple.Cripple script 
+	local script = Instance.new('LocalScript', Cripple)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Remove%20Legs.txt"))()
+	end)
+end
+coroutine.wrap(OBEI_fake_script)()
+local function SFVUD_fake_script() -- WeirdAghfly.Troll Fly script 
+	local script = Instance.new('LocalScript', WeirdAghfly)
+
+	script.Parent.MouseButton1Click:Connect(function()
+	local player = game.Players.LocalPlayer
+	local character = player.Character or player.CharacterAdded:Wait()
+	local humanoid = character:WaitForChild("Humanoid")
+	local rootPart = character:WaitForChild("HumanoidRootPart")
+	
+	local speed = 50
+	local isFlying = false
+	
+	local function toggleFly()
+		isFlying = not isFlying
+		humanoid.PlatformStand = isFlying
+		if isFlying then
+			print("Flying enabled!")
+		else
+			print("Flying disabled!")
+		end
+	end
+	
+	game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessedEvent)
+		if gameProcessedEvent then return end
+		if input.KeyCode == Enum.KeyCode.F then
+			toggleFly()
+		end
+	end)
+	
+	game:GetService("RunService").Stepped:Connect(function()
+		if isFlying then
+			local moveDirection = Vector3.new(0, 0, 0)
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.W) then
+				moveDirection += rootPart.CFrame.LookVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.S) then
+				moveDirection -= rootPart.CFrame.LookVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.A) then
+				moveDirection -= rootPart.CFrame.RightVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.D) then
+				moveDirection += rootPart.CFrame.RightVector
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.Space) then
+				moveDirection += Vector3.new(0, 1, 0)
+			end
+			if game:GetService("UserInputService"):IsKeyDown(Enum.KeyCode.LeftShift) then
+				moveDirection -= Vector3.new(0, 1, 0)
+			end
+			if moveDirection.Magnitude > 0 then
+				moveDirection = moveDirection.Unit
+			end
+			rootPart.Velocity = moveDirection * speed
+		else
+			rootPart.Velocity = Vector3.new(0, 0, 0)
+		end
+	end)
+	
+	if not character:IsDescendantOf(game) then
+		player.CharacterAdded:Connect(function(newCharacter)
+			character = newCharacter
+			humanoid = character:WaitForChild("Humanoid")
+			rootPart = character:WaitForChild("HumanoidRootPart")
+		end)
+	end
+	end)
+end
+coroutine.wrap(SFVUD_fake_script)()
+local function NJCEB_fake_script() -- GrabKnife.Grab knife script 
+	local script = Instance.new('LocalScript', GrabKnife)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://rawscripts.net/raw/Universal-Script-Grab-knife-v4-24753"))()
+		end)
+end
+coroutine.wrap(NJCEB_fake_script)()
+local function RCOTTL_fake_script() -- BTools.BTools script 
+	local script = Instance.new('LocalScript', BTools)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/BTools.txt"))()
+	end)
+	
+end
+coroutine.wrap(RCOTTL_fake_script)()
+local function BLIUI_fake_script() -- ctrlclickTP.ctrl+click TP script 
+	local script = Instance.new('LocalScript', ctrlclickTP)
+
+	script.Parent.MouseButton1Click:Connect(function()
+		loadstring(game:HttpGet("https://cdn.wearedevs.net/scripts/Click%20Teleport.txt"))()
+	end)
+	
+end
+coroutine.wrap(BLIUI_fake_script)()
+
+-- And yes ik this is structured super well
