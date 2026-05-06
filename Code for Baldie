@@ -1,5 +1,4 @@
--- Gui to Lua
--- Version: 3.2
+-- Baldie GUI
 
 -- Instances:
 
@@ -260,3 +259,5 @@ local function BLIUI_fake_script() -- ctrlclickTP.ctrl+click TP script
 	
 end
 coroutine.wrap(BLIUI_fake_script)()
+
+-- And yes ik this is structured super well
